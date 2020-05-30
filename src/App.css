@@ -1,5 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.nav-2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.nav-2 h3 {
+  padding-left: 120px;
 }

@@ -16,8 +16,8 @@ const Navbar = () => {
 
         <h3>
           Cart <a href='/about' alt='about' />
-          <i class='fas fa-shopping-cart'></i>
         </h3>
+        <i class='fas fa-shopping-cart'></i>
       </div>
     </div>
   );

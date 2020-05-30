@@ -21,3 +21,16 @@
 .nav-2 h3 {
   padding-left: 120px;
 }
+
+.shirtimg img {
+  height: 80%;
+  width: auto;
+  height: 200px;
+}
+
+.main-image {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 80px;
+  grid-gap: 90px;
+}

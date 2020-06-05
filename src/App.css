@@ -18,8 +18,20 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-.nav-2 h3 {
-  padding-left: 120px;
+.nav-2 li {
+  padding-left: 40px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-size: 20px;
+}
+
+.nav-2 ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  justify-self: left;
+  align-items: center;
+  list-style-type: none;
 }
 
 .shirtimg img {

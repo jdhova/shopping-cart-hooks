@@ -3,11 +3,13 @@ import blackshirt from '../images/blackshirt.jpeg';
 import blueshirt from '../images/blueshirt.jpeg';
 import redshirt from '../images/redshirt.jpeg';
 import whiteshirt from '../images/whiteshirt.jpeg';
-//import addBasket from '../context/cart/cartState';
-//import CartContext from '../context/cart/cartContext';
+import { connect } from 'react-redux';
+import { addBasket } from '../actions/addAction';
 
-const Home = () => {
+const Home = (props) => {
   const [basketNumbers, setBasketNumbers] = useState(0);
+
+  console.log(props);
 
   return (
     <div className='main-image'>
@@ -15,7 +17,7 @@ const Home = () => {
         <img src={blackshirt} alt='Black shirt' />
         <h3>Black shirt</h3>
         <h3>$24.30</h3>
-        <a className='addtocart' href='#'>
+        <a onClick={props.addBasket} className='addtocart' href='#'>
           Add to Basket
         </a>{' '}
       </div>
@@ -24,7 +26,7 @@ const Home = () => {
         <img src={blueshirt} alt='Black shirt' />
         <h3>Blue shirt</h3>
         <h3>$22.20</h3>
-        <a className='addtocart' href='#'>
+        <a onClick={props.addBasket} className='addtocart' href='#'>
           Add to Basket
         </a>
       </div>
@@ -33,7 +35,7 @@ const Home = () => {
         <img src={redshirt} alt='Black shirt' />
         <h3>Red shirt</h3>
         <h3>$20.00</h3>
-        <a className='addtocart' href='#'>
+        <a onClick={props.addBasket} className='addtocart' href='#'>
           Add to Basket
         </a>
       </div>
@@ -42,7 +44,7 @@ const Home = () => {
         <img src={whiteshirt} alt='Black shirt' />
         <h3>White shirt</h3>
         <h3>$32.00</h3>
-        <a className='addtocart' href='#'>
+        <a onClick={props.addBasket} className='addtocart' href='#'>
           Add to Basket
         </a>
       </div>
@@ -50,10 +52,4 @@ const Home = () => {
   );
 };
 
-export default Home;
-
-{
-  /* <a onClick={() => addBasket('blackshirt')} href='#'>
-          Add to cart{' '}
-        </a> */
-}
+export default connect(null, { addBasket })(Home);

@@ -11,13 +11,16 @@ const Navbar = () => {
       </div>
       <div className='nav-2'>
         <h3>
-          About <a href='/about' alt='about' />
+          About <a href='/#' alt='about' />
         </h3>
 
         <h3>
-          Cart <a href='/about' alt='about' />
+          Cart <a href='/#' alt='about' />
         </h3>
-        <i class='fas fa-shopping-cart'></i>
+        <h3>
+          Items in cart:<span>0</span>{' '}
+        </h3>
+        <i className='fas fa-shopping-cart'></i>
       </div>
     </div>
   );

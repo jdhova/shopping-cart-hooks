@@ -29,10 +29,11 @@
 }
 
 .main-image {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  padding: 80px;
-  grid-gap: 90px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  justify-self: center;
 }
 
 .shirtimg h3 {

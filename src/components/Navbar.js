@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { getNumbers } from '../actions/getAction';
 
-const Navbar = () => {
+const Navbar = (props) => {
+  useEffect(() => {
+    getNumbers();
+  }, []);
+
   return (
     <div className='main-nav'>
       <div className='nav-1'>
@@ -18,7 +24,7 @@ const Navbar = () => {
           Cart <a href='/#' alt='about' />
         </h3>
         <h3>
-          Items in cart:<span>0</span>{' '}
+          Items in cart:<span>{props.basketProps.basketNumbers}</span>{' '}
         </h3>
         <i className='fas fa-shopping-cart'></i>
       </div>
@@ -26,4 +32,8 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+const mapStateToProps = (state) => ({
+  basketProps: state.basketState,
+});
+
+export default connect(mapStateToProps, { getNumbers })(Navbar);

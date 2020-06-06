@@ -26,7 +26,7 @@ const initialState = {
       inCart: false,
     },
     whiteshirt: {
-      name: 'White Hoddie',
+      name: 'White Shirt',
       tagName: 'whiteshirt',
       price: 32.0,
       numbers: 0,

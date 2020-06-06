@@ -1,10 +1,12 @@
 import { ADD_PRODUCT_BASKET } from './types';
 
-export const addBasket = () => {
+export const addBasket = (productName) => {
   return (dispatch) => {
-    console.log('Adding to basket');
+    console.log('adding to basket');
+    console.log('product is: ', productName);
     dispatch({
       type: ADD_PRODUCT_BASKET,
+      payload: productName,
     });
   };
 };

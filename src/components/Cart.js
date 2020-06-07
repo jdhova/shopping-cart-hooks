@@ -6,8 +6,6 @@ import redshirt from '../images/redshirt.jpeg';
 import whiteshirt from '../images/whiteshirt.jpeg';
 
 const Cart = ({ cartProps }) => {
-  // console.log('here', props.cartProps);
-
   let productsInCart = [];
 
   Object.keys(cartProps.products).forEach((item) => {
@@ -15,14 +13,14 @@ const Cart = ({ cartProps }) => {
       productsInCart.push(cartProps.products[item]);
     }
 
-    console.log('new', productsInCart);
+    // console.log('new', productsInCart);
   });
 
   const productImages = [blackshirt, blueshirt, redshirt, whiteshirt];
 
   productsInCart = productsInCart.map((product, index) => {
     console.log('My product is');
-    console.log(product);
+    console.log(product, product.price);
 
     return (
       <Fragment key={index}>

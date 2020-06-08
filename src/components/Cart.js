@@ -13,7 +13,7 @@ const Cart = ({ cartProps }) => {
       productsInCart.push(cartProps.products[item]);
     }
 
-    // console.log('new', productsInCart);
+    console.log('new', productsInCart);
   });
 
   const productImages = [blackshirt, blueshirt, redshirt, whiteshirt];

@@ -16,7 +16,17 @@ const Cart = ({ cartProps }) => {
     console.log('new', productsInCart);
   });
 
-  const productImages = [blackshirt, blueshirt, redshirt, whiteshirt];
+  const productImages = (product) => {
+    if (product.tagName === 'blackshirt') {
+      return blackshirt;
+    } else if (product.tagName === 'blueshirt') {
+      return blueshirt;
+    } else if (product.tagName === 'redshirt') {
+      return redshirt;
+    } else {
+      return whiteshirt;
+    }
+  };
 
   productsInCart = productsInCart.map((product, index) => {
     console.log('My product is');
@@ -26,7 +36,7 @@ const Cart = ({ cartProps }) => {
       <Fragment key={index}>
         <div className='product'>
           <icon-icon name='close-circle'></icon-icon>{' '}
-          <img src={productImages[index]} />
+          <img src={productImages(product)} />
           <span className='sm-hide'>{product.name}></span>
         </div>
 

@@ -15,7 +15,7 @@ const mainHome = () => {
             </li>
 
             <li>
-              <Link to='/woman'>Women </Link>
+              <Link to='/women'>Women </Link>
             </li>
           </ul>
         </div>

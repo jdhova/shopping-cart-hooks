@@ -26,6 +26,14 @@ const Navbar = (props) => {
             </li>
             <li>
               {' '}
+              <Link to='/men'>Men</Link>
+            </li>
+            <li>
+              {' '}
+              <Link to='/women'>Women</Link>
+            </li>
+            <li>
+              {' '}
               <Link to='/cart'>
                 <span>Cart: {props.basketProps.basketNumbers}</span>
               </Link>

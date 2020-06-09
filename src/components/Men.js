@@ -6,7 +6,7 @@ import whiteshirt from '../images/whiteshirt.jpeg';
 import { connect } from 'react-redux';
 import { addBasket } from '../actions/addAction';
 
-const Home = (props) => {
+const Men = (props) => {
   const [basketNumbers, setBasketNumbers] = useState(0);
 
   console.log(props);
@@ -68,4 +68,4 @@ const Home = (props) => {
   );
 };
 
-export default connect(null, { addBasket })(Home);
+export default connect(null, { addBasket })(Men);

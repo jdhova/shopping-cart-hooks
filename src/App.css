@@ -32,6 +32,8 @@
   justify-self: left;
   align-items: center;
   list-style-type: none;
+  font-family: fantasy;
+  font-size: 40px;
 }
 
 .shirtimg img {
@@ -158,4 +160,33 @@
   .basketTotalContainer {
     padding-right: 8%;
   }
+}
+
+.main-home {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+}
+
+.home2 {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-around;
+}
+
+.home1 h1 {
+  padding-bottom: 70px;
+  font-family: fantasy;
+  font-size: 50px;
+}
+
+.home2 li {
+  padding-top: 10px;
+  list-style-type: none;
+  font-size: 25px;
+  font-family: fantasy;
 }

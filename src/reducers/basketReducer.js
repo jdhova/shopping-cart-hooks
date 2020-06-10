@@ -2,6 +2,7 @@ import {
   ADD_PRODUCT_BASKET,
   GET_NUMBERS_BASKET,
   REMOVE_PRODUCT_BASKET,
+  IMPLEMENT_DISCOUNT_CODE,
 } from '../actions/types';
 
 const initialState = {
@@ -101,6 +102,18 @@ export default (state = initialState, action) => {
           ...state.products,
           [action.payload]: removeQuantity,
         },
+      };
+
+    case IMPLEMENT_DISCOUNT_CODE:
+      let discQuantity = { ...state.products[action.payload] };
+      discQuantity.price *= 0.2;
+
+      console.log('here now', discQuantity);
+      return {
+        cartCost: discQuantity.price,
+        // cartCost: state.cartCost - removeQuantity.price,
+        // cartCost: state.cartCost - 1,
+        // //cartCost: state.cartCost,
       };
 
     case GET_NUMBERS_BASKET:

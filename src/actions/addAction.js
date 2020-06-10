@@ -32,3 +32,16 @@ export const removeBasket = (productName) => {
 
 // use conditionals to check how many in cart before
 // adding or removing  IMPORTANT.
+
+// CHECK DISCOUNT CODE
+
+// Create box to take input,
+//add function to the box
+// send function to action to check and execute with type
+// create case statement with reducer
+// pass to cart and implement /
+// implement on state.
+
+// we using the onsubmit button event handler to check the e.target.value
+
+// check the code that comes n before execution.

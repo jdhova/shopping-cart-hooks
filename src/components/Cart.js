@@ -8,6 +8,7 @@ import redgown from '../images/redgown.jpeg';
 import blackgown from '../images/blackgown.jpeg';
 import pinkgown from '../images/pinkgown.jpeg';
 import bluegown from '../images/bluegown.jpeg';
+import Discount from './discount';
 
 const Cart = ({ cartProps }) => {
   let productsInCart = [];
@@ -71,19 +72,22 @@ const Cart = ({ cartProps }) => {
   });
 
   return (
-    <div className='container-products'>
-      <div className='product-header'>
-        <h5 className='product-title'>PRODUCT</h5>
-        <h5 className='price sm-hide'>PRICE</h5>
-        <h5 className='quantity'>QUANTITY</h5>
-        <h5 className='total'>TOTAL</h5>
+    <Fragment>
+      <div className='container-products'>
+        <div className='product-header'>
+          <h5 className='product-title'>PRODUCT</h5>
+          <h5 className='price sm-hide'>PRICE</h5>
+          <h5 className='quantity'>QUANTITY</h5>
+          <h5 className='total'>TOTAL</h5>
+        </div>
+        <div className='products'>{productsInCart}</div>
+        <div className='basketTotalContainer'>
+          <h4 className='basketTotalTitle'>Basket Total</h4>
+          <h4 className='basketTotal'>{cartProps.cartCost}</h4>
+        </div>
+        <Discount />
       </div>
-      <div className='products'>{productsInCart}</div>
-      <div className='basketTotalContainer'>
-        <h4 className='basketTotalTitle'>Basket Total</h4>
-        <h4 className='basketTotal'>{cartProps.cartCost}</h4>
-      </div>
-    </div>
+    </Fragment>
   );
 };
 

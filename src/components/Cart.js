@@ -4,6 +4,10 @@ import blackshirt from '../images/blackshirt.jpeg';
 import blueshirt from '../images/blueshirt.jpeg';
 import redshirt from '../images/redshirt.jpeg';
 import whiteshirt from '../images/whiteshirt.jpeg';
+import redgown from '../images/redgown.jpeg';
+import blackgown from '../images/blackgown.jpeg';
+import pinkgown from '../images/pinkgown.jpeg';
+import bluegown from '../images/bluegown.jpeg';
 
 const Cart = ({ cartProps }) => {
   let productsInCart = [];
@@ -23,8 +27,16 @@ const Cart = ({ cartProps }) => {
       return blueshirt;
     } else if (product.tagName === 'redshirt') {
       return redshirt;
-    } else {
+    } else if (product.tagName === 'whiteshirt') {
       return whiteshirt;
+    } else if (product.tagName === 'redgown') {
+      return redgown;
+    } else if (product.tagName === 'bluegown') {
+      return bluegown;
+    } else if (product.tagName === 'blackgown') {
+      return blackgown;
+    } else {
+      return pinkgown;
     }
   };
 

@@ -1,4 +1,8 @@
-import { ADD_PRODUCT_BASKET, GET_NUMBERS_BASKET } from '../actions/types';
+import {
+  ADD_PRODUCT_BASKET,
+  GET_NUMBERS_BASKET,
+  REMOVE_PRODUCT_BASKET,
+} from '../actions/types';
 
 const initialState = {
   basketNumbers: 0,
@@ -32,6 +36,34 @@ const initialState = {
       numbers: 0,
       inCart: false,
     },
+    pinkgown: {
+      name: 'Pink Gown',
+      tagName: 'pinkgown',
+      price: 240.3,
+      numbers: 0,
+      inCart: false,
+    },
+    bluegown: {
+      name: 'Blue Gown',
+      tagName: 'bluegown',
+      price: 134.2,
+      numbers: 0,
+      inCart: false,
+    },
+    blackgown: {
+      name: 'Blue Gown',
+      tagName: 'blackgown',
+      price: 142.0,
+      numbers: 0,
+      inCart: false,
+    },
+    redgown: {
+      name: 'Blue Gown',
+      tagName: 'redgown',
+      price: 550.0,
+      numbers: 0,
+      inCart: false,
+    },
   },
 };
 
@@ -50,6 +82,24 @@ export default (state = initialState, action) => {
         products: {
           ...state.products,
           [action.payload]: addQuantity,
+        },
+      };
+
+    case REMOVE_PRODUCT_BASKET:
+      let removeQuantity = { ...state.products[action.payload] };
+      removeQuantity.numbers -= 1;
+      if (!removeQuantity.inCart) {
+        removeQuantity.inCart = false;
+      } else {
+        removeQuantity.inCart = true;
+      }
+      return {
+        basketNumbers: state.basketNumbers - 1,
+        cartCost: state.cartCost - removeQuantity.price,
+
+        products: {
+          ...state.products,
+          [action.payload]: removeQuantity,
         },
       };
 

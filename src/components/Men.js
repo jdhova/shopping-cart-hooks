@@ -5,6 +5,7 @@ import redshirt from '../images/redshirt.jpeg';
 import whiteshirt from '../images/whiteshirt.jpeg';
 import { connect } from 'react-redux';
 import { addBasket } from '../actions/addAction';
+import { removeBasket } from '../actions/addAction';
 
 const Men = (props) => {
   const [basketNumbers, setBasketNumbers] = useState(0);
@@ -24,6 +25,14 @@ const Men = (props) => {
         >
           Add to Basket
         </a>{' '}
+        <br></br>
+        <a
+          onClick={() => props.removeBasket('blackshirt')}
+          className='addtocart'
+          href='#'
+        >
+          Remove from Basket
+        </a>{' '}
       </div>
 
       <div className='shirtimg'>
@@ -37,6 +46,14 @@ const Men = (props) => {
         >
           Add to Basket
         </a>
+        <br></br>
+        <a
+          onClick={() => props.removeBasket('blackshirt')}
+          className='addtocart'
+          href='#'
+        >
+          Remove from Basket
+        </a>{' '}
       </div>
 
       <div className='shirtimg'>
@@ -50,6 +67,14 @@ const Men = (props) => {
         >
           Add to Basket
         </a>
+        <br></br>
+        <a
+          onClick={() => props.removeBasket('blackshirt')}
+          className='addtocart'
+          href='#'
+        >
+          Remove from Basket
+        </a>{' '}
       </div>
 
       <div className='shirtimg'>
@@ -63,9 +88,17 @@ const Men = (props) => {
         >
           Add to Basket
         </a>
+        <br></br>
+        <a
+          onClick={() => props.removeBasket('blackshirt')}
+          className='addtocart'
+          href='#'
+        >
+          Remove from Basket
+        </a>{' '}
       </div>
     </div>
   );
 };
 
-export default connect(null, { addBasket })(Men);
+export default connect(null, { addBasket, removeBasket })(Men);

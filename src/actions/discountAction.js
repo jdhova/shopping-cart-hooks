@@ -1,11 +1,10 @@
 import { IMPLEMENT_DISCOUNT_CODE } from './types';
 
-export const disCode = (code) => {
+export const disCode = () => {
   return (dispatch) => {
-    console.log('here', code);
+    console.log('here');
     dispatch({
       type: IMPLEMENT_DISCOUNT_CODE,
-      payload: code,
     });
   };
 };

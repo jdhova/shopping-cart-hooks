@@ -88,12 +88,16 @@ export default (state = initialState, action) => {
 
     case REMOVE_PRODUCT_BASKET:
       let removeQuantity = { ...state.products[action.payload] };
-      removeQuantity.numbers -= 1;
-      if (!removeQuantity.inCart) {
-        removeQuantity.inCart = false;
+      console.log('how here', removeQuantity.numbers);
+      // removeQuantity.numbers -= 1;
+      if (removeQuantity.numbers === 0 && removeQuantity.cartCost === 0) {
+        removeQuantity.cartCost = 0;
+        state.basketNumbers = 0;
+        state.cartCost = 0;
       } else {
-        removeQuantity.inCart = true;
+        removeQuantity.numbers = -1;
       }
+
       return {
         basketNumbers: state.basketNumbers - 1,
         cartCost: state.cartCost - removeQuantity.price,
@@ -106,7 +110,7 @@ export default (state = initialState, action) => {
 
     case IMPLEMENT_DISCOUNT_CODE:
       let discQuantity = { ...state.products[action.payload] };
-      discQuantity.price *= 0.2;
+      // discQuantity.price *= 0.2;
 
       console.log('here now', discQuantity);
       return {

@@ -112,7 +112,7 @@ export default (state = initialState, action) => {
       let discQuantity = { ...state.products[action.payload] };
       // discQuantity.price *= 0.2;
 
-      console.log('here now', discQuantity);
+      console.log('here now', discQuantity.cost);
       return {
         cartCost: discQuantity.price,
         // cartCost: state.cartCost - removeQuantity.price,
